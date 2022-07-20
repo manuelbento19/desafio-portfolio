@@ -1,0 +1,283 @@
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    color: var(--text-color)
+}
+.container{
+    display: flex;
+}
+.card{
+    background-color: var(--bg-cards);
+    padding: 16px;
+    border-radius: 6px;
+    gap: 10px;
+}
+/*Aside*/
+.container aside{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 22px;
+}
+.container aside .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.container aside .header figure{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid rgb(1, 208, 1);
+    overflow: hidden;
+    padding: 1px;
+}
+.container aside .header figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.container aside .header strong{
+    font-weight: 600;
+}
+.container aside .header span{
+    font-size: 13px;
+    margin-top: -4px;
+}
+.container aside .info{
+    display: flex;
+    flex-direction: column;
+}
+.container aside .info ul{
+    padding: 2px 18px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.container aside .info ul li a{
+    text-decoration: none;
+    display: flex;
+    gap: 22px;
+    color: var(--text-color);
+    transition: all .4s;
+    font-size: 13px;
+}
+.container aside .info ul li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+.container aside .info ul li img{
+    width: 18px;
+}
+.container aside .techs{
+    display: flex;
+    flex-direction: column;
+}
+.container aside .techs h3{
+    font-weight: 600;
+    font-size: 14px;
+}
+.container aside .techs ul{
+    padding: 4px 18px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+}
+.container aside .techs ul li a{
+    font-size: 10px;
+    background-color: var(--bg-techs);
+    border-radius: 6px;
+    color: var(--body-bg-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 4px 8px;
+}
+.container aside .techs ul li a:hover{
+    transition: all .5s;
+    background-color: transparent;
+    color: var(--bg-techs);
+    border: 1px solid var(--bg-techs);
+}
+/*Main*/
+.container main{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 22px;
+}
+.container main .projects{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.container main .projects header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container main .projects header a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+.container main .projects header a:hover{
+    transition: color .3s;
+    color: #ddd;
+}
+.container main .projects .content{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.container main .projects .content article{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.container main .projects .content article .header{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.container main .projects .content article .header a{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.container main .projects .content article .header a:hover{
+    transition: color .4s;
+    color: #ddd;
+}
+.container main .projects .content article .header a img{
+    width: 20px;
+}
+.container main .projects .content article p {
+    margin-top: 20px;
+    font-size: 13px;
+}
+.container main .projects .content article .footer {
+    display: flex;
+    justify-content: space-between;
+}
+.container main .projects .content article .footer ul {
+    margin-top: 6px;
+    display: flex;
+    gap: 14px;
+    list-style: none;
+}
+.container main .projects .content article .footer ul a{
+    font-size: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.container main .projects .content article .footer ul img{
+    width: 12px;
+}
+.container main .projects .content article .footer .circle-place{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 12px;
+}
+.container main .projects .content article .footer .circle-place div{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.container main .posts{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.container main .posts header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container main .posts .content{
+    display: flex;
+    flex-direction: column;
+}
+.container main .posts .content article{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.container main .posts .content article .avatar{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.container main .posts .content article .avatar img{
+    width: 100%;   
+}
+.container main .posts .content article .description{
+    display: flex;
+    flex-direction: column;
+}
+.container main .posts .content article .description .header{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.container main .posts .content article .description .header span{
+    font-weight: 100;
+    font-size: 13px;
+}
+.container main .posts .content article .description p{
+    font-weight: 100;
+    font-size: 13px;
+    margin: 12px 0;
+}
+.container main .posts .content article .description .footer{
+    display: flex;
+    margin: auto 0;
+}
+.container main .posts .content article .description .footer ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.container main .posts .content article .description .footer ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--text-color);
+}
+.container main .posts .content article .description .footer ul li a:hover{
+    transition: color .3s;
+    color: #ddd;
+}
