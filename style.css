@@ -151,12 +151,13 @@ body{
 }
 .container main .projects .content{
     display: flex;
-    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .container main .projects .content article{
-    flex: 1;
     display: flex;
+    flex: auto;
     flex-direction: column;
 }
 .container main .projects .content article .header{
